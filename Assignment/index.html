@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Personal Info Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #6dd5fa, #ffffff);
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+      color: #333;
+    }
+
+    .form-container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    .radio-group {
+      display: flex;
+      gap: 15px;
+      margin-top: 5px;
+    }
+
+    .radio-group label {
+      font-weight: normal;
+    }
+
+    input[type="submit"] {
+      background-color: #6dd5fa;
+      color: white;
+      font-weight: bold;
+      border: none;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+      border-radius: 6px;
+      padding: 12px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #2193b0;
+    }
+
+    /* Example table + image container */
+    section.example-table {
+      max-width: 700px;
+      margin: 30px auto 0;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+      color: #333;
+    }
+
+    section.example-table h3 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .table-image-container {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+
+    .table-image-container table {
+      flex: 1 1 300px;
+      min-width: 280px;
+      border-collapse: collapse;
+      border: 1px solid #6dd5fa;
+      width: 100%;
+    }
+
+    table thead {
+      background-color: #6dd5fa;
+      color: white;
+    }
+
+    table th,
+    table td {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .example-image {
+      flex: 0 0 150px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Fill In Your Details</h2>
+    <form>
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Your full name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="you@example.com" required />
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" required />
+
+      <label>Gender</label>
+      <div class="radio-group">
+        <label><input type="radio" name="gender" value="male" /> Male</label>
+        <label><input type="radio" name="gender" value="female" /> Female</label>
+      </div>
+
+      <label for="country">Country</label>
+      <select id="country" required>
+        <option value="" disabled selected>Select your country</option>
+        <option value="cambodia">Cambodia</option>
+        <option value="india">India</option>
+        <option value="usa">USA</option>
+        <option value="japan">Japan</option>
+      </select>
+
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+
+  <section class="example-table">
+    <h3>Example Submitted Data</h3>
+    <div class="table-image-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Date of Birth</th>
+            <th>Gender</th>
+            <th>Country</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Khun Sihavimott</td>
+            <td>Vimottx@gmail.com</td>
+            <td>04-12-2006</td>
+            <td>Male</td>
+            <td>Cambodia</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <img
+        src="download (1).jpg"
+        alt="Example Image"
+        class="example-image" 
+      />
+    </div>
+  </section>
+
+</body>
+</html>
